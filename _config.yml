@@ -10,7 +10,7 @@ blog_theme: light # Or use dark
 # Optional settings
 
 discus_identifier: # Add your Disqus identifier
-ga_analytics: # Add your GA Tracking Id
+ga_analytics: UA-87003513-1
 rss_enabled: true # Change to false if not
 social:
   dribbble: # Add your Dribbble link

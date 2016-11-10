@@ -3,6 +3,7 @@ layout: post
 title:  "Understanding filterM"
 date:   2016-11-06 21:19:00 +0100
 categories: haskell
+tags: haskell functional-programming
 ---
 
 At the recent Haskell Meetup I went to, someone posed this interesting challenge:
@@ -41,7 +42,7 @@ As mentioned before, monads are still a bit scary to me. What I always end up do
 
 We’re passing in `const [True, False]` into `filterM`. So our monad in this case would be the list monad `[]`. Let’s see what that gives us.
 
-```
+```haskell
 filterM :: (a -> [Bool]) -> [a] -> [[a]]
 ```
 
