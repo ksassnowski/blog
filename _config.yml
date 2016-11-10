@@ -1,10 +1,10 @@
 # Mandatory settings
 
 baseurl: /
-name: Chalk
+name: on error resume next
 paginate: 25
 paginate_path: "/posts/page/:num/"
-url: # add site url http://example.com/
+url: https://kai-sassnowski.com
 blog_theme: light # Or use dark
 
 # Optional settings
@@ -15,10 +15,10 @@ rss_enabled: true # Change to false if not
 social:
   dribbble: # Add your Dribbble link
   facebook: # Add your Facebook link
-  github: # Add your GitHub link
-  linkedin: # Add your LinkedIn link
-  twitter: # Add your Twitter handle
-  email: # Add your Email address
+  github: https://github.com/ksassnowski
+  linkedin: https://de.linkedin.com/in/kai-sassnowski-48aa6b102
+  twitter: warsh33p
+  email: ksassnowski@gmail.com
   bitcoin: # Add your Bitcoin link or address
 
 # Important settings (change at own risk)
