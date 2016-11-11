@@ -103,7 +103,7 @@ do b <- [True, False]
 What does `b <- [True, False]` do? We’re in a do-expression, so this is just syntactic sugar around bind (`>>=`) calls. Let’s desugar and see what we end up with.
 
 ```haskell
-[True, False] >>= \x -> if b then liftM (1:) rest else rest
+[True, False] >>= \b -> if b then liftM (1:) rest else rest
 ```
 
 Ok, so depending on what `b` is, we either execute `liftM (x:) rest` or simply `rest`. `rest` is the result of our initial recursive call `filterM p xs` which has type `m [a]` since that is the return type of `filterM`.
