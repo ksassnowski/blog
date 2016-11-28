@@ -168,10 +168,10 @@ As you can see, `fmap` for our little array wrapper is simply `array_map`! The o
 ```php
 $add1 = function ($x) { return $x + 1; };
 
-$arr = new Functor([1, 2, 3, 4]);
+$arr = new Arr([1, 2, 3, 4]);
 
 $mappedArr = $arr->fmap($add1);
-// Functor([2, 3, 4, 5])
+// Arr([2, 3, 4, 5])
 ```
 
 Works as expected, neat.
