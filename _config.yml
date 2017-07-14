@@ -10,7 +10,6 @@ blog_theme: light # Or use dark
 # Optional settings
 
 discus_identifier: # Add your Disqus identifier
-ga_analytics: UA-87003513-1
 rss_enabled: true # Change to false if not
 social:
   dribbble: # Add your Dribbble link
@@ -18,7 +17,7 @@ social:
   github: https://github.com/ksassnowski
   linkedin: https://de.linkedin.com/in/kai-sassnowski-48aa6b102
   twitter: warsh33p
-  email: ksassnowski@gmail.com
+  email: me@kai-sassnowski.com
   bitcoin: # Add your Bitcoin link or address
 
 # Important settings (change at own risk)
