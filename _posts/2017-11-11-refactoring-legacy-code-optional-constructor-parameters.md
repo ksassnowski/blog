@@ -33,6 +33,7 @@ With that in mind, how would you go about testing this method? There is no good 
 One thing you can do in this case is to declare the dependency as an **optional constructor dependency**. Then in your method call you only instantiate the dependency if it hasn’t been passed in through the constructor.
 
 {% highlight php %}
+{% raw %}
 class LegacyClass
 {
     /** @var null|MyDependency */
@@ -49,11 +50,13 @@ class LegacyClass
         // do something...
     }
 }
+{% endraw %}
 {% endhighlight &}
 
 This way you can now pass in a stub/mock/fake/whatever in your test but at the same time don’t have to touch any existing code. If we don’t pass in a dependency through the constructor the method simply works the way it did before.
 
 {% highlight php %}
+{% raw %}
 /** @test */
 public function it_does_something()
 {
@@ -65,12 +68,14 @@ public function it_does_something()
 
     // Assert against the result...
 }
+{% endraw %}
 {% endhighlight %}
 
 ### Injecting dependencies on a per-method basis
 If, for some reason, passing in dependencies through the constructor is impractical e.g. `MyDependency` requires parameters that are not available at the time `LegacyClass` gets instantiated, you can follow the same pattern to inject the dependency into the method call instead.
 
 {% highlight php %}
+{% raw %}
 class LegacyClass
 {
     public function legacyMethod(?MyDependency $dep = null)
@@ -79,6 +84,7 @@ class LegacyClass
         // do something...
     }
 }
+{% endraw %}
 {% endhighlight %}
 
 ## Oh god this is even worse!
