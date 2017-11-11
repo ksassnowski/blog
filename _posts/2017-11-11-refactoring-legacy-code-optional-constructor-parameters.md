@@ -14,7 +14,8 @@ The issue usually is that legacy code is not very conducive to testing. This mig
 
 Take this simplified piece of code for example:
 
-```php
+{% highlight php %}
+{% raw %}
 class LegacyClass
 {
     public function legacyMethod()
@@ -23,7 +24,8 @@ class LegacyClass
         // do something...
     }
 }
-```
+{% endraw %}
+{% endhighlight %}
 
 Now, let me preface this by saying that I usually am not a big fan of mock-heavy tests. But in the case of a legacy application I really don’t want to pull in a dependency that I can’t control. In some cases it might even make testing close to impossible because of how tightly coupled everything is. What is `MyDependency` doing? It might extend 15 other classes. It might require a database connection. It might send out an email using hardcoded production credentials! Not something I want to happen every time I run a test.
 
