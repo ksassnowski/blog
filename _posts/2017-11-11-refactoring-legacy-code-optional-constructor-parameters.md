@@ -35,18 +35,18 @@ One thing you can do in this case is to declare the dependency as an **optional 
 ```php
 class LegacyClass
 {
-	/** @var null|MyDependency */
-	private $dep;
+    /** @var null|MyDependency */
+    private $dep;
 
-	public function __construct(?MyDependency $dep = null)
+    public function __construct(?MyDependency $dep = null)
     {
         $this->dep = $dep;   
-	}
+    }
 
     public function legacyMethod()
-	{
-    $dependency = $this->dep ?: new MyDependency();
-    // do something...
+    {
+        $dependency = $this->dep ?: new MyDependency();
+        // do something...
     }
 }
 ```
