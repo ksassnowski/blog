@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Renderless Blade Components"
-date: 2020-09-23 08:00:00 +01:00
+date: 2020-09-23 07:00:00 +01:00
 categories: php laravel
 tags: php laravel
 ---
