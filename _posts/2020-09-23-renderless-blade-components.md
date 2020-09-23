@@ -10,9 +10,11 @@ _If you’ve already read Adam Wathan’s excellent blog post about [renderless 
 
 This post was inspired by a recent [pull request on the Laravel repository.](https://github.com/laravel/framework/pull/34339). The idea was to add a middleware stack to the view layer, similar to how routes go through a list of HTTP middleware. You would then be able to manipulate the HTML of the view before it gets rendered. The example use-case given in the PR was to handle shortcodes, i.e. replacing `[user id="1" field="first_name"]` with the first name of the User with id 1.
 
-While working on something unrelated, I found myself reading through Laravel’s documentation on [Blade components](https://laravel.com/docs/8.x/blade#components). There two ways to define a Blade component: class-based components and anonymous components. For this post, we’re only interested in class-based components.
+While working on something unrelated, I found myself reading through Laravel’s documentation on [Blade components](https://laravel.com/docs/8.x/blade#components) and I had to think of this PR again. Maybe there's a way to achieve a similar end result by using Blade components?
 
 ## Returning views from the render method
+
+There are two ways to define a Blade component: class-based components and anonymous components. For this post, we’re only interested in class-based components.
 
 When we use a custom Blade component in our templates, the template engine will first attempt to resolve the tag to a registered class-based component. If found, it will then call the `render` method on the class to get the string representation of our component.
 
