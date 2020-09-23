@@ -75,17 +75,17 @@ use Illuminate\View\Component;
 
 class CensorSwearWords extends Component
 {
-	private array $badWords = [
+    private array $badWords = [
         'poopoo',
         // and other, similarly vile words
-	];
+    ];
 
-	public function render()
-	{
+    public function render()
+    {
         return function (array $data) {
             return str_replace($this->badWords, '*****', $data['slot']);
         };
-	}
+    }
 }
 ```
 
