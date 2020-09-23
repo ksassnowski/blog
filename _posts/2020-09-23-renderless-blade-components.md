@@ -29,7 +29,7 @@ public function render()
 
 Very similar to how a controller might work, we return the view that corresponds to our component.
 
-However, the documentation mentions another thing you can inside the `render` method.
+However, the documentation mentions another thing you can do inside the `render` method.
 
 ## Returning a Closure
 
