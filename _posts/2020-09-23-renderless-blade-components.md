@@ -18,7 +18,7 @@ When we use a custom Blade component in our templates, the template engine will 
 
 In most cases, your render method will look something like this
 
-```php
+```php?start_inline=true
 public function render()
 {
     return view('components.my-custom-component');
@@ -33,15 +33,15 @@ However, the documentation mentions another thing you can inside the `render` me
 
 If we want to access the component’s name, attributes or slot, we can return a Closure from the render function instead. The closure will receive a `$data` array as its only argument and needs to return the string representation of our component.
 
-```php
+```php?start_inline=true
 public function render()
 {
-	  return function (array $data) {
-		  // $data['attributes']
+    return function (array $data) {
+        // $data['attributes']
         // $data['componentName']
         // $data['slot']
 
-		  return '<p>Component goes brrrrr</p>';
+        return '<p>Component goes brrrrr</p>';
     };
 }
 ```
@@ -76,15 +76,15 @@ use Illuminate\View\Component;
 class CensorSwearWords extends Component
 {
 	private array $badWords = [
-		'poopoo',
-		// and other, similarly vile words
+        'poopoo',
+        // and other, similarly vile words
 	];
 
 	public function render()
 	{
-		return function (array $data) {
-			return str_replace($this->badWords, '*****', $data['slot']);
-		};
+        return function (array $data) {
+            return str_replace($this->badWords, '*****', $data['slot']);
+        };
 	}
 }
 ```
